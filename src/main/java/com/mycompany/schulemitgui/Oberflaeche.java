@@ -12,6 +12,17 @@ public class Oberflaeche extends JFrame implements ActionListener {
         this.setSize(500,500);
         this.setLayout(new FlowLayout());
 
+        JMenuBar menuBar = new JMenuBar();
+
+        JMenu Start = new JMenu("Start");
+        JMenu Optionen = new JMenu("Optionen");
+
+        menuBar.add(Start);
+        menuBar.add(Optionen);
+
+        this.setJMenuBar(menuBar);
+        this.setVisible(true);
+
     }
 
     @Override
