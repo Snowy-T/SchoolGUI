@@ -7,22 +7,22 @@ import java.awt.event.ActionListener;
 
 public class Oberflaeche extends JFrame implements ActionListener {
 
+    MenuLeiste menuLeiste = new MenuLeiste();
+    PanelStart panelStart = new PanelStart();
+
+
     Oberflaeche(){
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(500,500);
         this.setLayout(new FlowLayout());
-
-        JMenuBar menuBar = new JMenuBar();
-
-        JMenu Start = new JMenu("Start");
-        JMenu Optionen = new JMenu("Optionen");
-
-        menuBar.add(Start);
-        menuBar.add(Optionen);
-
-        this.setJMenuBar(menuBar);
+        this.add(panelStart);
+        this.setJMenuBar(menuLeiste);
         this.setVisible(true);
 
+        panelStart.btn_allesLoeschen.addActionListener(this);
+        panelStart.btn_alleAnzeigen.addActionListener(this);
+
+        menuLeiste.start.addActionListener(this);
     }
 
     @Override
