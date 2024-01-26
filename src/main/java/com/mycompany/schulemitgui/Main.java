@@ -10,6 +10,6 @@ package com.mycompany.schulemitgui;
  */
 public class Main {
     public static void main(String[] args) {
-        new Oberflaeche().setVisible(true);
+        new Oberflaeche();
     }
 }

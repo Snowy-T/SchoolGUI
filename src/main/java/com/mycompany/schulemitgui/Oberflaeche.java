@@ -7,26 +7,42 @@ import java.awt.event.ActionListener;
 
 public class Oberflaeche extends JFrame implements ActionListener {
 
-    MenuLeiste menuLeiste = new MenuLeiste();
+    MenuLeiste menuLeiste;
+    JPanel mainPanel = new JPanel();
     PanelStart panelStart = new PanelStart();
 
 
     Oberflaeche(){
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(500,500);
-        this.setLayout(new FlowLayout());
-        this.add(panelStart);
+
+
+        menuLeiste = new MenuLeiste();
         this.setJMenuBar(menuLeiste);
+
+        add(BorderLayout.CENTER , mainPanel);
+        mainPanel.setLayout(null);
+
+        mainPanel.add(panelStart);
+
+
+
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setSize(new Dimension(500,500));
+        setLocationRelativeTo(null);
+        this.setResizable(false);
         this.setVisible(true);
-
-        panelStart.btn_allesLoeschen.addActionListener(this);
-        panelStart.btn_alleAnzeigen.addActionListener(this);
-
-        menuLeiste.start.addActionListener(this);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        if(e.getSource() == panelStart.btn_allesLoeschen){
+            System.out.println("Alles löschen");
+        }
+        if(e.getSource() == panelStart.btn_alleAnzeigen){
+            System.out.println("Alle anzeigen");
+        }
+        if(e.getSource() == menuLeiste.start){
+            System.out.println("Start");
+        }
 
     }
 }
