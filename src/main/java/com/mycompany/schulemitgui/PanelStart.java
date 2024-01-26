@@ -18,8 +18,12 @@ public class PanelStart extends JPanel implements ActionListener {
 
         btn_alleAnzeigen = new JButton("Alle Anzeigen");
         btn_alleAnzeigen.setBounds(170,150,150,50);
-        add(btn_alleAnzeigen);
 
+        btn_allesLoeschen = new JButton("Alles Löschen");
+        btn_allesLoeschen.setBounds(170,250,150,50);
+
+        add(btn_alleAnzeigen);
+        add(btn_allesLoeschen);
 
         this.setLayout(null);
         this.setVisible(true);
