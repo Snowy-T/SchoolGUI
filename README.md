@@ -17,7 +17,7 @@
 
 ## **Explanation:**
 
-The German text is about the design of a user interface for a school management system. The system should be attractive and easy to use, with clear graphics and color compositions. It should also be intuitive, so that users can easily understand how to use it.
+The system should be attractive and easy to use, with clear graphics and color compositions. It should also be intuitive, so that users can easily understand how to use it.
 
 The system will handle three types of data: ***students***, ***classes***, and ***teachers***. Students and teachers will each have a ***first name***, ***last name***, and ***ID number***. ***Teachers*** will also have a ***subject***.
 
