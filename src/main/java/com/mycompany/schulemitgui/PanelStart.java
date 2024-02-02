@@ -9,12 +9,17 @@ public class PanelStart extends JPanel implements ActionListener {
 
 
     JButton btn_alleAnzeigen,btn_allesLoeschen;
+    JLabel panelName;
 
 
     public PanelStart() {
 
         setSize(500,500);
-        setBackground(Color.gray);
+
+        panelName = new JLabel("START");
+        panelName.setFont(new Font("Arial", Font.BOLD, 30));
+        panelName.setBounds(195, 10, 100, 50);
+
 
         btn_alleAnzeigen = new JButton("Alle Anzeigen");
         btn_alleAnzeigen.setBounds(170,150,150,50);
@@ -24,6 +29,7 @@ public class PanelStart extends JPanel implements ActionListener {
 
         add(btn_alleAnzeigen);
         add(btn_allesLoeschen);
+        add(panelName);
 
         this.setLayout(null);
         this.setVisible(true);
@@ -31,6 +37,9 @@ public class PanelStart extends JPanel implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == btn_alleAnzeigen) {
+            System.out.println("Alle anzeigen");
+        }
 
 
 
