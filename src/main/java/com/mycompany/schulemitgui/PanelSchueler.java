@@ -83,6 +83,7 @@ public class PanelSchueler extends JPanel implements ActionListener{
             if (txt_vorname.getText().isBlank()) {
                 lbl_vornameNoInputError.setVisible(true);
             } else {
+
                 lbl_vornameNoInputError.setVisible(false);
             }
 
