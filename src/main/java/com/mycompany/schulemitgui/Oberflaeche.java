@@ -58,6 +58,8 @@ public class Oberflaeche extends JFrame implements ActionListener {
         if(e.getSource() == menuLeiste.schueler){
             PanelSchueler.setVisible(true);
             panelStart.setVisible(false);
+            PanelLehrer.setVisible(false);
+            PanelKlasse.setVisible(false);
 
             mainPanel.add(PanelSchueler);
             System.out.println("Schueler");
@@ -65,12 +67,18 @@ public class Oberflaeche extends JFrame implements ActionListener {
         if(e.getSource() == menuLeiste.lehrer){
             PanelLehrer.setVisible(true);
             panelStart.setVisible(false);
+            PanelSchueler.setVisible(false);
+            PanelKlasse.setVisible(false);
+
             mainPanel.add(PanelLehrer);
             System.out.println("Lehrer");
         }
         if(e.getSource() == menuLeiste.klasse){
             PanelKlasse.setVisible(true);
             panelStart.setVisible(false);
+            PanelSchueler.setVisible(false);
+            PanelLehrer.setVisible(false);
+
             mainPanel.add(PanelKlasse);
             System.out.println("Klasse");
         }
