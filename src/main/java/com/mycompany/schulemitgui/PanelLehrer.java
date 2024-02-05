@@ -11,12 +11,10 @@ public class PanelLehrer extends JPanel implements ActionListener {
     JButton btn_hinzufuegen,btn_loeschen,btn_anzeigen;
 
     public PanelLehrer() {
-        this.setLayout(null);
         panelName = new JLabel("Lehrer");
         panelName.setFont(new Font("Arial", Font.BOLD, 20));
         size = panelName.getPreferredSize();
         panelName.setBounds(300, 10, size.width, size.height);
-        this.setVisible(true);
 
         btn_hinzufuegen = new JButton("Hinzufügen");
         btn_hinzufuegen.setBounds(100, 100, 300, 50);
@@ -27,13 +25,27 @@ public class PanelLehrer extends JPanel implements ActionListener {
         btn_anzeigen = new JButton("Anzeigen");
         btn_anzeigen.setBounds(100, 300, 300, 50);
 
+        add(panelName);
+        add(btn_hinzufuegen);
+        add(btn_loeschen);
+        add(btn_anzeigen);
+
+        this.setLayout(null);
+        this.setVisible(true);
 
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
-
+        if (e.getSource() == btn_hinzufuegen) {
+            System.out.println("Hinzufügen");
+        }
+        if (e.getSource() == btn_loeschen) {
+            System.out.println("Löschen");
+        }
+        if (e.getSource() == btn_anzeigen) {
+            System.out.println("Anzeigen");
+        }
 
     }
 }

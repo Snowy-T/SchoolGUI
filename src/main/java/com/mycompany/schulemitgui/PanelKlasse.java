@@ -7,7 +7,8 @@ import java.awt.event.ActionListener;
 public class PanelKlasse extends JPanel implements ActionListener {
 
     JLabel lbl_klassenname, lbl_klassenlehrer, lbl_klassenraum, lbl_klassennameNoInputError, lbl_klassenlehrerNoInputError, lbl_klassenraumNoInputError;
-    JTextField txt_klassenname, txt_klassenlehrer, txt_klassenraum;
+    JTextField txt_klassenname,txt_klassenraum;
+    JComboBox<String> cb_klassenlehrer;
     JButton btn_addKlasse, btn_removeKlasse;
 
     public PanelKlasse(){
@@ -37,8 +38,10 @@ public class PanelKlasse extends JPanel implements ActionListener {
 
         txt_klassenname = new JTextField();
         txt_klassenname.setBounds(170, 50, 200, 50);
-        txt_klassenlehrer = new JTextField();
-        txt_klassenlehrer.setBounds(170, 100, 200, 50);
+
+        cb_klassenlehrer = new JComboBox<>();
+        cb_klassenlehrer.setBounds(170, 100, 200, 50);
+
         txt_klassenraum = new JTextField();
         txt_klassenraum.setBounds(170, 150, 200, 50);
 
@@ -51,7 +54,7 @@ public class PanelKlasse extends JPanel implements ActionListener {
         add(lbl_klassenlehrer);
         add(lbl_klassenraum);
         add(txt_klassenname);
-        add(txt_klassenlehrer);
+        add(cb_klassenlehrer);
         add(txt_klassenraum);
         add(btn_addKlasse);
         add(btn_removeKlasse);
