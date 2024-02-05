@@ -40,9 +40,9 @@ public class PanelStart extends JPanel implements ActionListener {
         if (e.getSource() == btn_alleAnzeigen) {
             System.out.println("Alle anzeigen");
         }
-
-
-
+        if (e.getSource() == btn_allesLoeschen) {
+            System.out.println("Alles löschen");
+        }
     }
 
 }
